@@ -1,0 +1,423 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: OBC BMS VCU EVCC
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ Charger_Max_V : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Charger_Max_I : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Cell_Voltaje_Sum : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ChargerRelay : 7|7@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ FanControl : 6|6@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ErrorLED : 5|5@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Disch : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Prechrelay : 3|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ChangeEnable : 2|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MAINrelaNeg : 1|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MAINrelayPos : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Gate : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1616 UDS_RESPONSE: 8 Vector__XXX
+
+BO_ 1600 UDS_REQUEST: 8 Vector__XXX
+
+BO_ 1353 EVCC_event_matrix: 8 EVCC
+ SG_ evcc_EvccError : 0|1@1+ (1,0) [0|1] ""  VCU
+ SG_ evcc_SlacError : 1|1@1+ (1,0) [0|1] ""  VCU
+ SG_ evcc_V2gError : 2|1@1+ (1,0) [0|1] ""  VCU
+ SG_ evcc_V2gTransportError : 3|1@1+ (1,0) [0|1] ""  VCU
+ SG_ evcc_V2gSecurityError : 4|1@1+ (1,0) [0|1] ""  VCU
+ SG_ evcc_PosContactorStuckOpen : 5|1@1+ (1,0) [0|1] ""  VCU
+ SG_ evcc_PosContactorWelded : 6|1@1+ (1,0) [0|1] ""  VCU
+ SG_ evcc_NegContactorStuckOpen : 7|1@1+ (1,0) [0|1] ""  VCU
+ SG_ evcc_NegContactorWelded : 8|1@1+ (1,0) [0|1] ""  VCU
+ SG_ evcc_InletStuckUnlocked : 9|1@1+ (1,0) [0|1] ""  VCU
+ SG_ evcc_InletStuckLocked : 10|1@1+ (1,0) [0|1] ""  VCU
+ SG_ evcc_InletNotUnlockedHvpResent : 11|1@1+ (1,0) [0|1] ""  VCU
+ SG_ evcc_ControlPilotVoltFault : 12|1@1+ (1,0) [0|1] ""  VCU
+ SG_ evcc_ProximityPilotVoltFault : 13|1@1+ (1,0) [0|1] ""  VCU
+ SG_ evcc_ControlPilotPwmFault : 14|1@1+ (1,0) [0|1] ""  VCU
+ SG_ evcc_EvCanCommTimeout : 15|1@1+ (1,0) [0|1] ""  VCU
+ SG_ evcc_BusBarOverTempMod : 16|1@1+ (1,0) [0|1] ""  VCU
+ SG_ evcc_BusBarOverTempWarn : 17|1@1+ (1,0) [0|1] ""  VCU
+ SG_ evcc_BusBarTempSensorFault : 18|1@1+ (1,0) [0|1] ""  VCU
+ SG_ evcc_InletOverTempModDc : 19|1@1+ (1,0) [0|1] ""  VCU
+ SG_ evcc_InletOverTempWarnDc : 20|1@1+ (1,0) [0|1] ""  VCU
+ SG_ evcc_InletTempSensorFaultDc : 21|1@1+ (1,0) [0|1] ""  VCU
+ SG_ evcc_InletOverTempModAc : 22|1@1+ (1,0) [0|1] ""  VCU
+ SG_ evcc_InletOverTempWarnAc : 23|1@1+ (1,0) [0|1] ""  VCU
+ SG_ evcc_InletTempSensorFaultAc : 24|1@1+ (1,0) [0|1] ""  VCU
+ SG_ evcc_HvilFault : 25|1@1+ (1,0) [0|1] ""  VCU
+ SG_ evcc_DcInputOverVolt : 26|1@1+ (1,0) [0|1] ""  VCU
+ SG_ evcc_DcInputUnderVolt : 27|1@1+ (1,0) [0|1] ""  VCU
+ SG_ evcc_DcInputOverCurrentMod : 28|1@1+ (1,0) [0|1] ""  VCU
+ SG_ evcc_DcInputOverCurrentWarn : 29|1@1+ (1,0) [0|1] ""  VCU
+ SG_ evcc_DcHvLinkOverVolt : 30|1@1+ (1,0) [0|1] ""  VCU
+ SG_ evcc_DcHvLinkSensorFault : 31|1@1+ (1,0) [0|1] ""  VCU
+ SG_ evcc_FcHvLinkOverVolt : 32|1@1+ (1,0) [0|1] ""  VCU
+ SG_ evcc_FcHvLinkSensorFault : 33|1@1+ (1,0) [0|1] ""  VCU
+ SG_ evcc_PcbOverTempMod : 35|1@1+ (1,0) [0|1] ""  VCU
+ SG_ evcc_PcbOverTempWarn : 36|1@1+ (1,0) [0|1] ""  VCU
+ SG_ evcc_PcbTempSensorFault : 37|1@1+ (1,0) [0|1] ""  VCU
+ SG_ evcc_EvFault : 38|1@1+ (1,0) [0|1] ""  VCU
+ SG_ evcc_EmergencyShutdown : 39|1@1+ (1,0) [0|1] ""  VCU
+
+BO_ 1351 EVCC_info: 8 EVCC
+ SG_ EVCC_DI_2 : 31|1@1+ (1,0) [0|0] ""  VCU
+ SG_ EVCC_sw_revision : 24|5@1+ (1,0) [0|31] "" Vector__XXX
+ SG_ EVCC_sw_minor : 16|5@1+ (1,0) [0|31] "" Vector__XXX
+ SG_ EVCC_sw_major : 8|5@1+ (1,0) [0|31] "" Vector__XXX
+ SG_ EVCC_internal_state : 0|5@1+ (1,0) [0|31] ""  VCU
+ SG_ EVCC_inlet_state : 21|3@1+ (1,0) [0|7] ""  VCU
+ SG_ EVCC_contactor_state : 13|3@1+ (1,0) [0|7] ""  VCU
+ SG_ EVCC_isolation_status : 5|3@1+ (1,0) [0|7] ""  VCU
+ SG_ EVCC_hvil_state : 29|2@1+ (1,0) [0|3] ""  VCU
+
+BO_ 1350 EVCC_target: 8 EVCC
+ SG_ EVCC_derate_fcjb_current : 0|1@1+ (1,0) [0|1] ""  VCU,BMS
+ SG_ EVCC_derate_evse_current : 1|1@1+ (1,0) [0|1] ""  VCU,BMS
+ SG_ EVCC_derate_fcjb_temperature : 2|1@1+ (1,0) [0|1] ""  VCU,BMS
+ SG_ EVCC_derate_inlet_temperature : 3|1@1+ (1,0) [0|1] ""  VCU,BMS
+ SG_ EVCC_target_current : 16|16@1- (0.02,0) [-655.36|655.34] "A"  VCU,BMS
+ SG_ EVCC_target_voltage : 32|16@1+ (0.03,0) [0|1966.05] "V"  VCU,BMS
+
+BO_ 1348 EVCC_inlet_temperatures: 8 EVCC
+ SG_ EVCC_inlet_temperature_3 : 32|16@1- (0.003,40) [-58.304|138.301] "C"  VCU
+ SG_ EVCC_inlet_temperature_2 : 16|16@1- (0.003,40) [-58.304|138.301] "C"  VCU
+ SG_ EVCC_inlet_temperature_1 : 0|16@1- (0.003,40) [-58.304|138.301] "C"  VCU
+
+BO_ 1347 EVCC_ac_status: 8 EVCC
+ SG_ EVCC_pilot_duty : 24|7@1+ (1,0) [0|100] "%"  VCU,OBC
+ SG_ EVCC_prox_state : 19|3@1+ (1,0) [0|7] ""  VCU,OBC
+ SG_ EVCC_pilot_state : 16|3@1+ (1,0) [0|7] ""  VCU,OBC
+ SG_ EVCC_max_current : 0|16@1- (0.005,0) [-163.84|163.835] "A"  VCU,OBC
+
+BO_ 1298 BMS_target: 8 BMS
+ SG_ BMS_target_voltage : 32|16@1+ (0.1,0) [0|6553.5] "V"  EVCC
+ SG_ BMS_target_current : 16|16@1- (0.1,0) [-3276.8|3276.7] "A"  EVCC
+ SG_ BMS_target_alive_counter : 48|4@1+ (1,0) [0|15] ""  EVCC
+ SG_ BMS_target_CRC : 56|8@1+ (1,0) [0|0] ""  EVCC
+
+BO_ 1352 EVCC_limits: 8 EVCC
+ SG_ EVCC_limit_voltage : 32|16@1+ (0.03,0) [0|1966.05] "V"  VCU,BMS
+ SG_ EVCC_limit_current : 16|16@1- (0.02,0) [-655.36|655.34] "A"  VCU,BMS
+ SG_ EVCC_derate_full_power : 1|1@1+ (1,0) [0|1] ""  VCU,BMS
+
+BO_ 1297 BMS_present: 8 BMS
+ SG_ BMS_present_current : 32|16@1- (0.1,0) [-3276.8|3276.7] "A"  EVCC
+ SG_ BMS_pack_voltage : 16|16@1+ (0.1,0) [0|6553.5] "V"  EVCC
+ SG_ BMS_dc_link_voltage : 0|16@1+ (0.1,0) [0|6553.5] "V"  EVCC
+ SG_ BMS_present_CRC : 56|8@1+ (1,0) [0|0] ""  EVCC
+ SG_ BMS_present_alive_counter : 48|4@1+ (1,0) [0|15] ""  EVCC
+
+BO_ 1346 EVCC_hv_status: 8 EVCC
+ SG_ EVCC_hv_inlet_link_voltage : 16|16@1+ (0.03,0) [0|1966.05] "V"  VCU,BMS
+ SG_ EVCC_hv_dc_link_voltage : 0|16@1+ (0.03,0) [0|1966.05] "V"  VCU,BMS
+ SG_ EVCC_present_current : 32|16@1- (0.02,0) [-655.36|655.34] "A"  VCU,BMS
+
+BO_ 1345 EVCC_temperatures: 8 EVCC
+ SG_ EVCC_busbar_temperature_n : 32|16@1- (0.003,40) [-58.304|138.301] "C"  VCU
+ SG_ EVCC_busbar_temperature_p : 16|16@1- (0.003,40) [-58.304|138.301] "C"  VCU
+ SG_ EVCC_fcjb_temperature : 0|16@1- (0.003,40) [-58.304|138.301] "C"  VCU
+
+BO_ 1344 EVCC_control: 8 EVCC
+ SG_ evcc_inlet_overtemp_derate_AC : 11|1@1+ (1,0) [0|1] ""  BMS,OBC,VCU
+ SG_ evcc_inlet_locked_hv_present : 12|1@1+ (1,0) [0|1] ""  BMS,VCU
+ SG_ EVCC_charging_type : 4|3@1+ (1,0) [0|7] ""  VCU
+ SG_ EVCC_isolation_request : 10|1@1+ (1,0) [0|1] ""  VCU,BMS
+ SG_ EVCC_charger_connected : 9|1@1+ (1,0) [0|1] ""  VCU
+ SG_ EVCC_session_state : 0|4@1+ (1,0) [0|15] ""  VCU
+ SG_ EVCC_ac_enabled : 8|1@1+ (1,0) [0|1] ""  VCU
+ SG_ EVCC_dc_enabled : 7|1@1+ (1,0) [0|1] ""  VCU
+ SG_ EVCC_control_CRC : 56|8@1+ (1,0) [0|0] ""  VCU
+ SG_ EVCC_control_alive_counter : 48|4@1+ (1,0) [0|15] ""  VCU
+
+BO_ 1312 OBC_status: 8 OBC
+ SG_ OBC_state : 0|3@1+ (1,0) [0|7] ""  EVCC
+
+BO_ 1280 EV_control: 8 VCU
+ SG_ EV_control_alive_counter : 48|4@1+ (1,0) [0|15] ""  EVCC
+ SG_ EV_control_CRC : 56|8@1+ (1,0) [0|0] ""  EVCC
+ SG_ EV_Lock_request : 5|2@1+ (1,0) [0|0] ""  EVCC
+ SG_ EV_sleep_request : 3|1@1+ (1,0) [0|1] ""  EVCC
+ SG_ EV_charge_permission : 0|1@1+ (1,0) [0|1] ""  EVCC
+ SG_ EV_fault : 1|2@1+ (1,0) [0|3] ""  EVCC
+
+BO_ 1296 BMS_status: 8 BMS
+ SG_ BMS_isolation_status : 16|3@1+ (1,0) [0|7] ""  EVCC
+ SG_ BMS_charge_time_remaining : 0|16@1+ (1,0) [0|65535] ""  EVCC
+ SG_ BMS_soc : 32|8@1+ (0.5,0) [0|127.5] "%"  EVCC
+
+BO_ 1281 Data1: 8 Vector__XXX
+ SG_ Pack_Voltage : 0|16@1+ (0.1,0) [0|0] "V" Vector__XXX
+ SG_ Pack_Current : 32|16@1- (0.1,0) [0|0] "A" Vector__XXX
+ SG_ Temp_High : 48|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ Temp_Low : 56|8@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 1282 Data2: 8 Vector__XXX
+ SG_ Allow_disch_current : 0|16@1+ (0.01,0) [0|0] "A" Vector__XXX
+ SG_ Allow_regen_current : 16|16@1+ (0.01,0) [0|0] "A" Vector__XXX
+ SG_ Amp_H_Sum : 32|16@1+ (1,0) [0|0] "A" Vector__XXX
+ SG_ Remaning_Energy : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1283 Data3: 8 Vector__XXX
+ SG_ IO_State : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ System_State : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Cell_Voltaje_Min : 16|16@1+ (0.001,0) [0|0] "V" Vector__XXX
+ SG_ Cell_Voltaje_Max : 32|16@1+ (0.001,0) [0|0] "V" Vector__XXX
+ SG_ LMU_with_highest_temp : 48|8@1+ (1,0) [0|0] "C" Vector__XXX
+ SG_ LMU_with_lowest_temp : 56|8@1+ (1,0) [0|0] "C" Vector__XXX
+
+BO_ 1284 Data4: 8 Vector__XXX
+ SG_ SOH : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ SOC : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Charger_Max_DC_V : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Charger_Max_DC_I : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CAN_Stop_Charger : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1285 Data5: 8 Vector__XXX
+ SG_ CAN_Charge_En : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CAN_Disch_En : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Charge_Enable : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ LeakDetectionDisable : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Error_Flags : 32|32@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2550588916 Cargador: 8 Vector__XXX
+ SG_ NewSignal_0026 : 0|16@1+ (1,0) [0|0] "V" Vector__XXX
+ SG_ NewSignal_0027 : 16|16@1+ (1,0) [0|0] "A" Vector__XXX
+
+
+
+CM_ SG_ 3221225472 Charger_Max_V "";
+CM_ SG_ 3221225472 Charger_Max_I "";
+CM_ BO_ 1616 "Response message for UDS system.";
+CM_ BO_ 1600 "Request message for the UDS system.";
+CM_ SG_ 1353 evcc_EvccError "Fault Flag.";
+CM_ SG_ 1353 evcc_ControlPilotVoltFault "Fault caused by invalid voltage reading for pilot fault.";
+CM_ SG_ 1353 evcc_ControlPilotPwmFault "Fault caused by invalid frequency or duty cycle for pilot fault.";
+CM_ SG_ 1353 evcc_EvCanCommTimeout "Fault Flag.";
+CM_ SG_ 1353 evcc_BusBarOverTempMod "Charging stops.";
+CM_ SG_ 1353 evcc_BusBarOverTempWarn "DC charging is derated.";
+CM_ SG_ 1353 evcc_HvilFault "Fault Flag.";
+CM_ SG_ 1353 evcc_DcInputOverVolt "Auxiliary input over voltage fault.
+";
+CM_ SG_ 1353 evcc_DcInputUnderVolt "Auxiliary input under voltage fault.
+";
+CM_ SG_ 1353 evcc_DcInputOverCurrentMod "Auxiliary input over current fault.
+";
+CM_ SG_ 1353 evcc_DcInputOverCurrentWarn "Auxiliary input over current fault.
+";
+CM_ SG_ 1353 evcc_DcHvLinkOverVolt "Vehicle / Battery over voltage fault
+";
+CM_ SG_ 1353 evcc_DcHvLinkSensorFault "Vehicle / Battery sensor plausibility fault. Mismatch between internal reading and BMS reported voltage.
+";
+CM_ SG_ 1353 evcc_FcHvLinkOverVolt "Fault Flag.";
+CM_ SG_ 1353 evcc_FcHvLinkSensorFault "Fault Flag.";
+CM_ SG_ 1351 EVCC_DI_2 "Pin DIO_2_INPUT";
+CM_ SG_ 1351 EVCC_internal_state "State of the charging process";
+CM_ SG_ 1351 EVCC_inlet_state "State of inlet latch";
+CM_ SG_ 1351 EVCC_contactor_state "General state of contactors";
+CM_ SG_ 1351 EVCC_isolation_status "Isolation status as reported by BMS. Includes a disabled state which is required by EVCC to allow EVSE to do cable check";
+CM_ SG_ 1351 EVCC_hvil_state "State of the HVIL";
+CM_ BO_ 1350 "The target voltage and current as published by EVCC to EVSE. Also includes reasons for derating if target does not match the BMS requested target";
+CM_ SG_ 1350 EVCC_derate_fcjb_current "Flag set if the requested current from charger is lower than bms target because of fcjb current limit.
+";
+CM_ SG_ 1350 EVCC_derate_evse_current "Flag set if the requested current from charger is lower than bms target because of evse current limit.
+";
+CM_ SG_ 1350 EVCC_derate_fcjb_temperature "Flag set if the requested current from charger is lower than bms target because of fcjb over temperature
+
+";
+CM_ SG_ 1350 EVCC_derate_inlet_temperature "Flag set if the requested current from charger is lower than bms target because of inlet over temperature.
+";
+CM_ SG_ 1350 EVCC_target_current "Current to be requested from DC charger. Minimum of FCJB, EVSE limits together with BMS target.
+";
+CM_ SG_ 1350 EVCC_target_voltage "Voltage to be requested from DC charger. Minimum of FCJB, EVSE limits together with BMS target.
+";
+CM_ SG_ 1348 EVCC_inlet_temperature_3 "Overall temperature of inlet, this is the combined / calculated temperature of the inlet depending on which is relevant linked with customer configuration for AC or DC readings.";
+CM_ SG_ 1348 EVCC_inlet_temperature_2 "Overall temperature of inlet, this is the combined / calculated temperature of the inlet depending on which is relevant linked with customer configuration for AC or DC readings.";
+CM_ SG_ 1348 EVCC_inlet_temperature_1 "Overall temperature of inlet, this is the combined / calculated temperature of the inlet depending on which is relevant linked with customer configuration for AC or DC readings.";
+CM_ SG_ 1347 EVCC_pilot_duty "Duty cycle % of the pilot signal";
+CM_ SG_ 1347 EVCC_prox_state "State of the J1772 proximity input.";
+CM_ SG_ 1347 EVCC_max_current "Max AC current that AC charger supports based on duty cycle conversion.
+";
+CM_ SG_ 1298 BMS_target_voltage "The voltage limit as calculated by the BMS";
+CM_ SG_ 1298 BMS_target_current "The instantaneous current limit as calculated by BMS";
+CM_ BO_ 1352 "The target voltage and current as published by EVCC to EVSE. Also includes reasons for derating if target does not match the BMS requested targetThe target voltage and current as published by EVCC to EVSE. Also includes reasons for derating if target does not match the BMS requested target";
+CM_ SG_ 1352 EVCC_derate_full_power "Flag to indicate if EVCC is derating power to 50% due to fault.
+Flag to indicate if EVCC is derating power to 50% due to fault.
+";
+CM_ SG_ 1297 BMS_present_current "The current as measured by the BMS";
+CM_ SG_ 1297 BMS_pack_voltage "Voltage measurement of battery pack as measured by BMS";
+CM_ SG_ 1297 BMS_dc_link_voltage "Voltage of DC link as measure by BMS";
+CM_ BO_ 1346 "Voltages as measured by EVCC";
+CM_ SG_ 1346 EVCC_hv_inlet_link_voltage "Voltage measurement of the DC HV Link. As measured on inlet side of the FCJB contactors. If EVCC standlaone, this is populated by the reported voltage from the EVSE.";
+CM_ SG_ 1346 EVCC_hv_dc_link_voltage "Voltage of the HV DC link. As measured in FCJB by vehicle side of contactors";
+CM_ SG_ 1346 EVCC_present_current "Measured current reported by EVSE.";
+CM_ BO_ 1345 "Message with the temperatures measured by the EVCC";
+CM_ SG_ 1345 EVCC_busbar_temperature_n "Temperature reading from the busbars";
+CM_ SG_ 1345 EVCC_busbar_temperature_p "Temperature reading from the busbars";
+CM_ SG_ 1345 EVCC_fcjb_temperature "Internal temperature of FCJB, read from PCB";
+CM_ SG_ 1344 evcc_inlet_overtemp_derate_AC "Flag set if the measured AC temperature at the inlet goes too high and to prevent stopping charge the vehicle needs to reduce the charge limits.";
+CM_ SG_ 1344 EVCC_isolation_request "Request by EVCC / EVSE to turn off vehicle isolation check as EVSE will perform cable check";
+CM_ SG_ 1344 EVCC_charger_connected "Is charger connected. [0 disconnected, 1 connected]";
+CM_ SG_ 1344 EVCC_session_state "Simplified charging session state, used for controls";
+CM_ SG_ 1344 EVCC_ac_enabled "Flag to show if ac is enabled or not, only used to signal to vehicle if starting to charge is permitted.  [0 disabled, 1 enabled]";
+CM_ SG_ 1344 EVCC_dc_enabled "Flag to show if dc is enabled or not, only used to signal to vehicle if starting to charge is permitted. [0 disabled, 1 enabled]";
+CM_ SG_ 1312 OBC_state "State of OBC. ready to charge, charging, error, standby";
+CM_ SG_ 1280 EV_Lock_request "Lock/Unlock Request, (0=res, 1=lock, 2=unlock, 3=SNA)";
+CM_ SG_ 1280 EV_sleep_request "Vehicle sleep request";
+CM_ SG_ 1280 EV_charge_permission "Permission from vehicle for EVCC to start charging. BMS contactors should be closed to energize the DC link before setting this to allowed";
+CM_ SG_ 1280 EV_fault "Emergency stop enum. Inactive, Stop, STOP (open contactors)";
+CM_ SG_ 1296 BMS_isolation_status "Isolation status as reported by BMS. Includes a disabled state which is required by EVCC to allow EVSE to do cable check";
+CM_ SG_ 1296 BMS_charge_time_remaining "Number of seconds of charging remaining to hit bulk soc.";
+CM_ SG_ 1296 BMS_soc "The present SOC as calculated by BMS";
+CM_ SG_ 1281 Pack_Voltage "";
+CM_ SG_ 1281 Pack_Current "";
+CM_ SG_ 1282 Allow_disch_current "";
+CM_ SG_ 1282 Allow_regen_current "";
+CM_ SG_ 1282 Amp_H_Sum "";
+CM_ SG_ 1282 Remaning_Energy "";
+CM_ SG_ 1283 IO_State "";
+CM_ SG_ 1283 System_State "";
+CM_ SG_ 1283 Cell_Voltaje_Min "";
+CM_ SG_ 1283 Cell_Voltaje_Max "";
+CM_ SG_ 1283 LMU_with_highest_temp "";
+CM_ SG_ 1283 LMU_with_lowest_temp "";
+CM_ SG_ 1284 SOH "";
+CM_ SG_ 1284 SOC "";
+CM_ SG_ 1284 Charger_Max_DC_V "";
+CM_ SG_ 1284 Charger_Max_DC_I "";
+CM_ SG_ 1285 CAN_Charge_En "";
+CM_ SG_ 1285 CAN_Disch_En "";
+CM_ SG_ 1285 Charge_Enable "";
+CM_ SG_ 1285 LeakDetectionDisable "";
+CM_ SG_ 1285 Error_Flags "";
+CM_ SG_ 2550588916 NewSignal_0026 "Charger_Max_V";
+CM_ SG_ 2550588916 NewSignal_0027 "Charger_Max_I";
+BA_DEF_ SG_  "FieldType" STRING ;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 3600000;
+BA_DEF_ SG_  "GenSigSNA" INT 0 0;
+BA_DEF_DEF_  "FieldType" "";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenSigSNA" 0;
+BA_ "GenMsgCycleTime" BO_ 1353 100;
+BA_ "GenMsgCycleTime" BO_ 1351 100;
+BA_ "GenSigSNA" SG_ 1351 EVCC_internal_state 31;
+BA_ "GenSigSNA" SG_ 1351 EVCC_inlet_state 7;
+BA_ "GenSigSNA" SG_ 1351 EVCC_contactor_state 7;
+BA_ "GenSigSNA" SG_ 1351 EVCC_isolation_status 7;
+BA_ "GenSigSNA" SG_ 1351 EVCC_hvil_state 3;
+BA_ "GenMsgCycleTime" BO_ 1350 100;
+BA_ "GenSigSNA" SG_ 1350 EVCC_target_current 65535;
+BA_ "GenSigSNA" SG_ 1350 EVCC_target_voltage 65535;
+BA_ "GenMsgCycleTime" BO_ 1348 1000;
+BA_ "GenSigSNA" SG_ 1348 EVCC_inlet_temperature_3 65535;
+BA_ "GenSigSNA" SG_ 1348 EVCC_inlet_temperature_2 65535;
+BA_ "GenSigSNA" SG_ 1348 EVCC_inlet_temperature_1 65535;
+BA_ "GenMsgCycleTime" BO_ 1347 10;
+BA_ "GenSigSNA" SG_ 1347 EVCC_pilot_duty 127;
+BA_ "GenSigSNA" SG_ 1347 EVCC_prox_state 7;
+BA_ "GenSigSNA" SG_ 1347 EVCC_pilot_state 7;
+BA_ "GenSigSNA" SG_ 1347 EVCC_max_current 65535;
+BA_ "GenMsgCycleTime" BO_ 1298 100;
+BA_ "GenSigSNA" SG_ 1298 BMS_target_voltage 65535;
+BA_ "GenSigSNA" SG_ 1298 BMS_target_current 65535;
+BA_ "FieldType" SG_ 1298 BMS_target_alive_counter "counter";
+BA_ "FieldType" SG_ 1298 BMS_target_CRC "checksum";
+BA_ "GenMsgCycleTime" BO_ 1352 100;
+BA_ "GenSigSNA" SG_ 1352 EVCC_limit_voltage 65535;
+BA_ "GenSigSNA" SG_ 1352 EVCC_limit_current 65535;
+BA_ "GenMsgCycleTime" BO_ 1297 100;
+BA_ "GenSigSNA" SG_ 1297 BMS_present_current 65535;
+BA_ "GenSigSNA" SG_ 1297 BMS_pack_voltage 65535;
+BA_ "GenSigSNA" SG_ 1297 BMS_dc_link_voltage 65535;
+BA_ "FieldType" SG_ 1297 BMS_present_CRC "checksum";
+BA_ "FieldType" SG_ 1297 BMS_present_alive_counter "counter";
+BA_ "GenMsgCycleTime" BO_ 1346 100;
+BA_ "GenSigSNA" SG_ 1346 EVCC_hv_inlet_link_voltage 65535;
+BA_ "GenSigSNA" SG_ 1346 EVCC_hv_dc_link_voltage 65535;
+BA_ "GenSigSNA" SG_ 1346 EVCC_present_current 65535;
+BA_ "GenMsgCycleTime" BO_ 1345 1000;
+BA_ "GenSigSNA" SG_ 1345 EVCC_busbar_temperature_n 65535;
+BA_ "GenSigSNA" SG_ 1345 EVCC_busbar_temperature_p 65535;
+BA_ "GenSigSNA" SG_ 1345 EVCC_fcjb_temperature 65535;
+BA_ "GenMsgCycleTime" BO_ 1344 100;
+BA_ "GenSigSNA" SG_ 1344 EVCC_charging_type 7;
+BA_ "GenSigSNA" SG_ 1344 EVCC_session_state 15;
+BA_ "FieldType" SG_ 1344 EVCC_control_CRC "checksum";
+BA_ "FieldType" SG_ 1344 EVCC_control_alive_counter "counter";
+BA_ "GenMsgCycleTime" BO_ 1312 100;
+BA_ "GenSigSNA" SG_ 1312 OBC_state 7;
+BA_ "GenMsgCycleTime" BO_ 1280 100;
+BA_ "FieldType" SG_ 1280 EV_control_alive_counter "counter";
+BA_ "FieldType" SG_ 1280 EV_control_CRC "checksum";
+BA_ "GenSigSNA" SG_ 1280 EV_fault 3;
+BA_ "GenMsgCycleTime" BO_ 1296 100;
+BA_ "GenSigSNA" SG_ 1296 BMS_isolation_status 7;
+BA_ "GenSigSNA" SG_ 1296 BMS_charge_time_remaining 65535;
+BA_ "GenSigSNA" SG_ 1296 BMS_soc 255;
+VAL_ 1351 EVCC_internal_state 13 "AC Charge" 12 "V2G Complete" 11 "V2G Terminating" 10 "V2G Weld Check" 9 "V2G Stop Charging" 8 "V2G Charging" 7 "V2G Precharge" 6 "V2G Cable Check" 5 "V2G Lock" 4 "V2G Connect" 3 "Charger Connect" 2 "Not Ready" 1 "Standby" 0 "Boot" ;
+VAL_ 1351 EVCC_inlet_state 5 "fault" 4 "opening" 3 "open" 2 "closing" 1 "close" 0 "init" ;
+VAL_ 1351 EVCC_contactor_state 6 "welded" 5 "weld check" 4 "closed" 3 "closing" 2 "open" 1 "opening" 0 "init" ;
+VAL_ 1351 EVCC_isolation_status 2 "disabled" 1 "invalid" 0 "valid" ;
+VAL_ 1351 EVCC_hvil_state 1 "invalid" 0 "valid" ;
+VAL_ 1347 EVCC_prox_state 3 "not_connected" 2 "release_latch_engaged" 1 "connected" 0 "error" ;
+VAL_ 1347 EVCC_pilot_state 2 "c" 1 "b" 0 "a_f" ;
+VAL_ 1344 EVCC_charging_type 6 "Unknown" 5 "DcUnique" 4 "DcComboCore" 3 "DcExtended" 2 "DcCore" 1 "AcThreePhaseCore" 0 "AcSinglePhaseCore" ;
+VAL_ 1344 EVCC_isolation_request 1 "disable" 0 "none" ;
+VAL_ 1344 EVCC_session_state 7 "stopped" 6 "stopping" 5 "charging" 4 "HV initializing" 3 "ready" 2 "connecting" 1 "standby" 0 "not ready" ;
+VAL_ 1312 OBC_state 3 "error" 2 "charging" 1 "ready_to_charge" 0 "standby" ;
+VAL_ 1280 EV_sleep_request 1 "sleep" 0 "awake" ;
+VAL_ 1280 EV_charge_permission 1 "allowed" 0 "not_allowed" ;
+VAL_ 1280 EV_fault 2 "emergency_fault" 1 "fault" 0 "no_fault" ;
+VAL_ 1296 BMS_isolation_status 2 "disabled" 1 "invalid" 0 "valid" ;
+VAL_ 1285 Error_Flags 1 "Cell Over Voltage" 2 "Cell Under Voltage" 4 "Cell End of life voltage" 8 "Cell Voltage Mis read" 16 "Cell Over Temperature" 32 "Cell Under Temperature" 64 "Cell Unmanaged" 128 "LMU over Temperature
+" 256 "LMU under temperature
+" 512 "Temperature sensor open circuit" 1024 "Temperature sensor short circuit
+" 2048 "SUB communication
+" 4096 "LMU communication
+" 8192 "Over current IN
+" 16384 "Over current OUT
+" 32768 "Short circuit
+" 65536 "Leak detected
+" 131072 "Leak detection failed" 262144 "Voltage difference" 524288 "BMCU supply over voltage
+" 1048576 "BMCU supply under voltage" 2097152 "Main positive contactor
+" 4194304 "Main negative contactor
+" 8388608 "Precharge contactor
+" 16777216 "Midpack contactor" 33554432 "Precharge timeout
+" 67108864 "Charger not responding" 134217728 "Emergency Stop
+" ;
+
