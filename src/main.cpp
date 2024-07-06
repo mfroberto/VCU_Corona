@@ -516,7 +516,7 @@ void setup()
   pinMode(13, OUTPUT);
   digitalWrite(13, LOW); // BOCINA
   pinMode(14, OUTPUT);   // ARDUINO
-  digitalWrite(14, HIGH); // PERMITE COMPRESOR (HIGH) // NO PERMITE COMPRESOR(LOW)
+  digitalWrite(14, LOW); // PERMITE COMPRESOR (HIGH) // NO PERMITE COMPRESOR(LOW)
   Serial.begin(115200);
   Serial.println("Ver:10_2 Oscilacion SOC cuando carga y SOC 99 solo con SOC 99");
   setup_LCD_driver();
