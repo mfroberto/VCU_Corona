@@ -154,13 +154,8 @@ void RX_CAN()
     {
       if (rx_frame.data[1] != System_State)
       {
-        incSystem_State++;
-        if (incSystem_State > 3)
-          System_State = rx_frame.data[1];
-      }
-      else
-      {
-        incSystem_State = 0;
+        System_State = rx_frame.data[1];
+        Serial.println(System_State);
       }
       if (session == 5)
       {
@@ -530,7 +525,7 @@ void loop()
     tbrillo = 0;
     lcd.backlight();
     digitalWrite(13, LOW);
-    digitalWrite(14, HIGH);  // PERMITE COMPRESOR (LOW) // NO PERMITE COMPRESOR(HIGH)
+    digitalWrite(14, HIGH); // PERMITE COMPRESOR (LOW) // NO PERMITE COMPRESOR(HIGH)
     digitalWrite(26, HIGH); // SEVCOM NO PERMITE ACELERAR releSONMOT
     charger();
     if (session > 5)
@@ -546,6 +541,10 @@ void loop()
     {
       digitalWrite(14, LOW); // PERMITE COMPRESOR (LOW) // NO PERMITE COMPRESOR(HIGH)
       digitalWrite(26, LOW); // PERMITE ACELERAR(LOW)//NO PERMITE ACELERAR releSONMOT(HIGH)
+    }
+    else
+    {
+      digitalWrite(14, HIGH); // PERMITE COMPRESOR (LOW) // NO PERMITE COMPRESOR(HIGH)
     }
     if (millis() > TiempoLCD)
     {
