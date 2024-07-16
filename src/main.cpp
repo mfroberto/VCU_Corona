@@ -155,7 +155,6 @@ void RX_CAN()
       if (rx_frame.data[1] != System_State)
       {
         System_State = rx_frame.data[1];
-        Serial.println(System_State);
       }
       if (session == 5)
       {
@@ -232,26 +231,22 @@ void RX_CAN()
     }
     else if (rx_frame.identifier == 0x549) // Matriz
     {
-      if (charge_connecte == 2)
+      q1.x[0] = rx_frame.data[0];
+      q1.x[1] = rx_frame.data[1];
+      q1.x[2] = rx_frame.data[2];
+      q1.x[3] = rx_frame.data[3];
+      q1.x[4] = rx_frame.data[4];
+      q1.x[5] = rx_frame.data[5] & 0xFB;
+      q1.x[6] = 0;
+      q1.x[7] = 0;
+      if (q2->event != 0)
       {
-        q1.x[0] = rx_frame.data[0];
-        q1.x[1] = rx_frame.data[1];
-        q1.x[2] = rx_frame.data[2];
-        q1.x[3] = rx_frame.data[3];
-        q1.x[4] = rx_frame.data[4];
-        q1.x[5] = rx_frame.data[5] & 0xFB;
-        q1.x[6] = 0;
-        q1.x[7] = 0;
-        if (q2->event != 0)
-        {
-          errorCont++;
+        errorCont++;
+        if (errorCont > 6)
           LCD_error();
-          if (errorCont > 30)
-            ESP.restart();
-        }
-        else
-          errorCont = 0;
       }
+      else
+        errorCont = 0;
     }
   }
   else
@@ -456,7 +451,7 @@ reiniciar:
         session = 7;
         goto reiniciar;
       }
-      if (session == 7)
+      if (session == 7 || session == 6 ||  )
       {
         LCD_desconecte();
         for (;;)
@@ -541,10 +536,12 @@ void loop()
     {
       digitalWrite(14, LOW); // PERMITE COMPRESOR (LOW) // NO PERMITE COMPRESOR(HIGH)
       digitalWrite(26, LOW); // PERMITE ACELERAR(LOW)//NO PERMITE ACELERAR releSONMOT(HIGH)
+      Serial.println("digitalWrite(14, LOW)");
     }
     else
     {
       digitalWrite(14, HIGH); // PERMITE COMPRESOR (LOW) // NO PERMITE COMPRESOR(HIGH)
+      Serial.println("digitalWrite(14, HIGH)");
     }
     if (millis() > TiempoLCD)
     {
@@ -556,7 +553,6 @@ void loop()
       if (tRPM + 3000 < millis())
       {
         tRPM = millis();
-        digitalWrite(14, HIGH);
       }
       else if (millis() < tRPM + 100)
         digitalWrite(13, HIGH);
